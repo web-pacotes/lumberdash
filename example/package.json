@@ -1,0 +1,14 @@
+{
+	"name": "lumberdash-example",
+	"version": "0.0.0",
+	"description": "Example project to test lumberdash",
+	"main": "dist/index.js",
+	"module": "dist/index.cjs",
+	"types": "dist/index.d.ts",
+	"sideEffects": false,
+	"author": "web-pacotes",
+	"license": "MIT",
+	"dependencies": {
+		"lumberdash": "file:../"
+	}
+}
