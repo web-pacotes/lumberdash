@@ -1,6 +1,6 @@
 {
 	"name": "@web-pacotes/lumberdash",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "A simple, yet clean, top-level logging API with support for multiple clients with zero modification fees 🪵",
 	"main": "dist/index.js",
 	"module": "dist/index.cjs",
