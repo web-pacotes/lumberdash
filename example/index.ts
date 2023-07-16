@@ -1,7 +1,28 @@
-import sum from 'lumberdash';
+import {
+	ConsoleLumberdashClient,
+	logError,
+	logFatal,
+	logMessage,
+	logWarning,
+	putLumberdashToWork
+} from 'lumberdash';
 
 function main() {
-	console.log(sum(40, 2));
+	// Provide lumberdash clients that will log messages.
+	const clients = [new ConsoleLumberdashClient()];
+
+	// Put them to work!
+	putLumberdashToWork(clients);
+
+	// Start logging from top level API.
+	logMessage('My first lumberdash logging message!');
+	logWarning('Attemping to install lumbredash from npm...');
+	logError(
+		new Error(
+			'Package lumbredash does not exist! Make sure you download the correct one (@web-pacotes/lumberdash)'
+		)
+	);
+	logFatal('Exiting...');
 }
 
 main();
