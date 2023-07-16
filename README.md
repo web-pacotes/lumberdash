@@ -24,7 +24,10 @@ logMessage('My first lumberdash logging message!');
 However, if the bundled clients do not fit your style, you can easily create a new lumberdash client. Start by defining an implementation of [LumberdashClient](src/lumberdash/client.ts):
 
 ```typescript
-import { LoggingExtraParameters, LumberdashClient } from '@web-pacotes/lumberdash';
+import {
+	LoggingExtraParameters,
+	LumberdashClient
+} from '@web-pacotes/lumberdash';
 
 class KaomojiLumberdashClient extends LumberdashClient {}
 ```
