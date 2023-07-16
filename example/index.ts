@@ -1,5 +1,6 @@
 import {
 	ConsoleLumberdashClient,
+	EmojiLumberdashClient,
 	logError,
 	logFatal,
 	logMessage,
@@ -9,7 +10,7 @@ import {
 
 function main() {
 	// Provide lumberdash clients that will log messages.
-	const clients = [new ConsoleLumberdashClient()];
+	const clients = [new ConsoleLumberdashClient(), new EmojiLumberdashClient()];
 
 	// Put them to work!
 	putLumberdashToWork(clients);
