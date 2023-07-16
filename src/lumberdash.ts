@@ -1,19 +1,14 @@
+import { LoggingExtraParameters, LumberdashClient } from "./client";
+
 /**
  * Global list of {@link LumberdashClient} used to log messages.
  */
-const clients = <LumberdashClient>[];
-
-/**
- * Alias for positional parameters that most API calls can take in.
- */
-type LoggingExtraParameters = {
-    extras: Map<String, String>?,
-};
+const clients = new Array<LumberdashClient>();
 
 /**
  * Default value for positional extra parameters.
  */
-const DefaultExtrasParameters: LoggingExtraParameters = { extras: null };
+const DefaultExtrasParameters: LoggingExtraParameters = { extras: undefined };
 
 /**
  * Initializes Lumberdash with multiple clients that will log to different buffers 
@@ -21,7 +16,7 @@ const DefaultExtrasParameters: LoggingExtraParameters = { extras: null };
  * 
  * @param withClients - the list of {@link LumberdashClient} that will be used to log messages.
  */
-export function putLumberdashToWork(withClients: <LumberdashClient>[]) {
+export function putLumberdashToWork(withClients: LumberdashClient[]) {
     clients.length = 0;
     clients.push(...withClients);
 }
@@ -63,5 +58,5 @@ export function logFatal(message: string, { extras } = DefaultExtrasParameters):
  * @param error - content of the error.
  */
 export function logError(error: Error): void {
-    clients.forEach((c) => c.logMessage(error));
+    clients.forEach((c) => c.logError(error));
 }
