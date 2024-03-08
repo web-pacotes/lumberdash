@@ -1,5 +1,11 @@
 # @web-pacotes/lumberdash
 
+## 0.0.2
+
+### Patch Changes
+
+- ba61c0a: bugfix: set module entrypoint to target index.mjs
+
 ## 0.0.1
 
 ### Patch Changes
