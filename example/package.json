@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"description": "Example project to test lumberdash",
 	"main": "dist/index.js",
-	"module": "dist/index.cjs",
+	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
 	"sideEffects": false,
 	"author": "web-pacotes",
