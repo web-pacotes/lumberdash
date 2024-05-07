@@ -1,5 +1,11 @@
 # @web-pacotes/lumberdash
 
+## 0.0.3
+
+### Patch Changes
+
+- ae3569a: chore: set package type as module and replace swc with esbuild
+
 ## 0.0.2
 
 ### Patch Changes
